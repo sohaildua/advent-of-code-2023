@@ -1,4 +1,5 @@
-def gamefunctions(str):  
+
+def gameFunctionMax(str):  
     valSplit = str.split(':')
     gameresult = 0
     listngame = []
@@ -27,9 +28,16 @@ def gamefunctions(str):
                 if red > red_max: 
                     red_max = red
     print("mul")
-    return red_max * blue_max * green_max
-       
-          
+    return red_max * blue_max * green_max              
+    
                 
-str = 'Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green'
-print(gamefunctions(str))
+with open('day02/input.txt', 'r') as f:
+    result = 0
+    lines = f.readlines()
+    data = [entry.strip() for entry in lines]
+    dictgame = {}
+    for x in data:
+       result += gameFunctionMax(x)
+    
+    print(result)
+
