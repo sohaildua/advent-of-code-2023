@@ -9,7 +9,7 @@ def gamefunctions(str):
             red = 0
             green = 0
             for data in x.split(','):
-                print(len(x.split(',')))
+                print(data)
                 if 'blue' in data:
                     blue = int(data.strip().split(" ")[0])
                 if 'green' in data:
